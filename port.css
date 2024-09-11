@@ -37,19 +37,38 @@ section {
 *::selection {
   color: var(--bg-color);
   background: var(--main-color);
-}*/
-body.dark-mode-active {
-  --text-color: #fff;
-  --bg-color: #0f0c27;
+/* Light mode styles */
+.header {
+  background-color: #ffffff;
+  color: #000000;
 }
 
-section {
-  padding: 50px 10px;
+.navbar a {
+  color: #000000;
 }
 
-body.dark-mode-active *::selection {
-  color: var(--bg-color);
-  background: var(--main-color);
+.navbar a:hover {
+  color: #007bff;
+}
+
+/* Dark mode styles */
+.dark-mode .header {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.dark-mode .navbar a {
+  color: #f0f0f0;
+}
+
+.dark-mode .navbar a:hover {
+  color: #1e90ff;
+}
+
+/* Example for other elements */
+.dark-mode .content {
+  background-color: #222;
+  color: #ddd;
 }
 
 /* ========================================Navigation  section=====================================*/
@@ -192,14 +211,34 @@ header {
 }
 
 .about-image img {
-  width: 40%;
-  border-radius: 0.5rem;
+  max-width: 60%; /* Ensures the image is responsive */
+  height: auto;
+  display: block; /* Centers the image horizontally */
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px; /* Makes the corners round */
+  box-shadow: 0 4px 8px rgba(211, 67, 15, 0.1); /* Adds a subtle shadow for a more attractive look */
+  padding-left: 10%; /* Optional: Adjusts padding to your preference */
 }
 
-.about-text p {
+/* .about-text p {
   font-size: var(--p-font);
   font-weight: 400;
-  text-align: justify;
+  text-align: center;
+} */
+.about-text p {
+  text-align: center; /* Centers the text in the <p> tag */
+  margin: 10px 0; /* Adds vertical spacing between paragraphs */
+  line-height: 1.6; /* Adjusts line spacing for better readability */
+  max-width: 800px; /* Sets a maximum width for the text block */
+  margin-left: auto;
+  margin-right: auto; /* Centers the text block within its container */
+  padding: 0 15px; /* Adds some padding for better spacing */
+}
+
+.about-container .about-image,
+.about-container .about-text {
+  flex: 1; /* Makes both image and text take equal space */
 }
 
 /*==== word ke bche me spacing ka error h vo solve kana h ==== */
@@ -225,162 +264,134 @@ header {
 }
 
 /*=====skill skills-container======*/
-
 .skills {
-  width: 500px;
+  width: 80%;
+  max-width: 600px;
   margin: 40px auto;
   color: var(--text-color);
+  padding: 20px;
+  background: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .skills li {
   margin: 20px 0;
+  list-style: none;
+  padding: 10px 0;
+}
+
+.skills h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #2187e7;
 }
 
 .bar {
-  background: #353b48;
+  background: #ddd;
   display: block;
-  height: 10px;
-  border: 0.5px solid rgba(205, 9, 9, 0.4);
+  height: 12px;
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: 0 0 10px #775fd4b5;
+  position: relative;
+  box-shadow: 0 0 10px rgba(119, 95, 212, 0.71);
 }
 
 .bar span {
-  height: 20px;
-  float: left;
-  background: #2187e7;
+  height: 100%;
+  display: block;
+  background: linear-gradient(90deg, #2187e7, #33a1fd);
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  transition: width 0.5s ease-in-out;
 }
 
-.htm {
-  width: 90%;
-  animation: html 2s;
+.skills li:hover .htm {
+  animation: fillBar 1s forwards;
 }
 
-.css3 {
-  width: 65%;
+.skills li:hover .css3 {
+  animation: fillBar 1s forwards;
 }
 
-.js {
-  width: 75%;
+.skills li:hover .js {
+  animation: fillBar 1s forwards;
 }
 
-.cpp {
-  width: 95%;
+.skills li:hover .cpp {
+  animation: fillBar 1s forwards;
 }
 
-@keyframes html {
+@keyframes fillBar {
   0% {
-    width: 0%;
+    width: 0;
   }
   100% {
+    width: var(--width);
+  }
+}
+
+.learn-more {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.learn-more .btn {
+  background-color: #4c1993;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.learn-more .btn:hover {
+  background-color: #219cc9;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills {
     width: 90%;
   }
-}
 
-@keyframes css {
-  0% {
-    width: 0%;
+  .skills h3 {
+    font-size: 1rem;
   }
-  100% {
-    width: 90%;
-  }
-}
 
-@keyframes javascript {
-  0% {
-    width: 0%;
+  .bar {
+    height: 10px;
   }
-  100% {
-    width: 90%;
+
+  .learn-more .btn {
+    font-size: 0.9rem;
   }
 }
 
-@keyframes cppd {
-  0% {
-    width: 0%;
+@media (max-width: 480px) {
+  .skills {
+    width: 95%;
   }
-  100% {
-    width: 90%;
+
+  .skills h3 {
+    font-size: 0.9rem;
+  }
+
+  .bar {
+    height: 8px;
+  }
+
+  .learn-more .btn {
+    font-size: 0.8rem;
   }
 }
-
-/*
-
-.skills-container {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.skills-img img {
-    width: 80%;
-    padding-left: 4rem;
-    object-position: center;
-}
-
-.bar-box {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 4rem 7;
-    margin-bottom: 1rem;
-}
-
-.bar-box h3,
-.bar-box span {
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-.bar-box .light-bar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 05rem;
-    background: var(--text-color);
-    box-shadow: 5px 50px 10px rgba(218, 223, 227, 0.701);
-    border-radius: 10px;
-}
-
-.parcentage-bar {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 0.5rem;
-    background: var(--bg-color);
-    border-radius: 0.5rem;
-}
-
-.parcentage-bar span {
-    height: 100%;
-    width: 80%;
-    background: #6665ee;
-    position: absolute;
-    border-radius: 10px;
-}
-
-
-.parcentage-bar.c-bar {
-    width: 96%;
-}
-
-.parcentage-bar .html-bar {
-    width: 96%;
-}
-
-.css-bar {
-    width: 84%;
-}
-
-.parcentage-bar .js-bar {
-    width: 70%;
-}
-
-*/
 
 /*=====service-content======*/
 

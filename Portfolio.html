@@ -6,8 +6,8 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Arpan</title>
-      <link rel="icon" href="mic.ico" type="image/x-icon" />
-      <link rel="shortcut icon" href="arpan.jpg" type="image/x-icon" />
+      <!-- <link rel="icon" href="mic.ico" type="image/x-icon" /> -->
+      <link rel="shortcut icon" href="Image/mic.ico" type="image/x-icon" />
       <link rel="stylesheet" href="port.css" />
       <link
         rel="stylesheet"
@@ -29,11 +29,11 @@
         <!-- Menu items -->
         <ul class="navbar">
           <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Skills</a></li>
-          <li><a href="">Services</a></li>
+          <li><a href="Pages/About.html">About</a></li>
+          <li><a href="Pages/Skills.html">Skills</a></li>
+          <li><a href="Pages/">Services</a></li>
           <li><a href="">Portfolio</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="Pages/Contact.html">Contact</a></li>
 
           <!-- Dark mode button -->
           <li>
@@ -63,7 +63,7 @@
         </div>
 
         <div class="home-img">
-          <img src="E:\portfolio\arpan.jpg" alt="" />
+          <img src="Image/arpan.jpg" alt="" />
         </div>
 
         <div class="home-text">
@@ -78,41 +78,40 @@
       <!--========================================about section ================================================================-->
       <section class="about" id="about">
         <!--heading-->
-        <div class="heading">
-          <h2>About Me</h2>
-          <span> Introduction</span>
-        </div>
+        <h2 class="heading">
+          <i class="fas fa-laptop-code"></i> About <span>Me</span>
+        </h2>
         <!--about content-->
         <div class="about-container">
           <!--image -->
           <div class="about-image">
-            <img src="C:\Users\mohit\Desktop\portfolio\about2.jpg" alt />
+            <img src="Image/self.png" alt />
           </div>
           <!--text -->
           <div class="about-text">
             <p>
-              "Hi, I'm Arpan, a passionate web developer. My expertise lies in
-              HTML, CSS, JavaScript, and various front-end frameworks such as
-              React and Angular. <br />I love collaborating with clients to
-              understand their vision and turn their ideas into a functional and
-              aesthetically pleasing website. My attention to detail, creative
-              approach, and commitment to delivering high-quality work ensure
-              that my clients are always satisfied with the end product. In
-              addition to my technical skills, I have excellent communication
-              skills and enjoy working in a team environment.<br />
-              I stay up-to-date with the latest trends and technologies in the
-              industry, which allows me to create innovative and cutting-edge
-              solutions for my clients. When I'm not coding, I love hiking,
-              reading, and spending time with my family. If you're looking for a
-              dedicated and skilled web developer who can bring your vision to
-              life, please don't hesitate to reach out."
+              "Hi, I'm Arpan, a dedicated and passionate web developer
+              specializing in HTML, CSS, JavaScript, and front-end frameworks
+              like React and Angular. I thrive on transforming client ideas into
+              functional, visually appealing websites. With a strong focus on
+              detail, creativity, and quality, I consistently deliver results
+              that exceed expectations. Collaboration is at the heart of my
+              work; I take the time to understand each client's vision and work
+              closely with them to bring it to life. My excellent communication
+              skills and love for teamwork ensure smooth project execution and
+              client satisfaction. I stay ahead of industry trends and
+              technologies, enabling me to craft innovative and cutting-edge
+              solutions. Outside of coding, I enjoy hiking, reading, and
+              spending time with my family. If you're looking for a skilled web
+              developer who can turn your ideas into reality, feel free to reach
+              out—I'd love to collaborate!""
             </p>
             <!--information-->
             <div class="information">
               <!--box 1-->
               <div class="info-box">
                 <i class="bx bxs-user"></i>
-                <span>ARPAN</span>
+                <span>ARPAN YADAV</span>
               </div>
               <!--box2-->
               <div class="info-box">
@@ -137,42 +136,42 @@
       </section>
       <!--skill section -->
       <section class="skills" id="skills">
-        <div class="heading">
-          <h2>Skills</h2>
-          <span>My skills</span>
+        <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills <span>My</span></h2>
         </div>
-        <li>
-          <h3>HTML</h3>
-          <span class="bar">
-            <span class="htm"></span>
-          </span>
-        </li>
-        <li>
-          <h3>CSS</h3>
-          <span class="bar">
-            <span class="css3"></span>
-          </span>
-        </li>
-        <li>
-          <h3>JAVASCRIPT</h3>
-          <span class="bar">
-            <span class="js"></span>
-          </span>
-        </li>
-        <li>
-          <h3>CPP</h3>
-          <span class="bar">
-            <span class="cpp"></span>
-          </span>
-        </li>
+        <ul>
+          <li>
+            <h3>HTML</h3>
+            <span class="bar">
+              <span class="htm" style="--width: 90%"></span>
+            </span>
+          </li>
+          <li>
+            <h3>CSS</h3>
+            <span class="bar">
+              <span class="css3" style="--width: 65%"></span>
+            </span>
+          </li>
+          <li>
+            <h3>JAVASCRIPT</h3>
+            <span class="bar">
+              <span class="js" style="--width: 75%"></span>
+            </span>
+          </li>
+          <li>
+            <h3>Programing</h3>
+            <span class="bar">
+              <span class="cpp" style="--width: 95%"></span>
+            </span>
+          </li>
+        </ul>
+        <div class="learn-more">
+          <a href="Pages/Skills.html" class="btn">Learn more...</a>
+        </div>
       </section>
 
       <!--========================= service block==============================-->
       <section class="service" id="services">
-        <div class="heading">
-          <h2>Services</h2>
-          <span> Our services</span>
-        </div>
+        <h2 class="heading"><i class="fas fa-laptop-code"></i> Services <span>Our services</span></h2>
         <div class="services-content">
           <!--box 1-->
           <div class="services-box">
@@ -200,34 +199,48 @@
           </div>
         </div>
       </section>
+      <br>
       <!--=================================portfolio sectiom=====================-->
       <section class="portfolio" id="portfolio">
-        <div class="heading">
-          <h2>Portfolio</h2>
-          <span>My project</span>
-        </div>
+        <h2 class="heading">
+          <i class="fas fa-laptop-code"></i> Projects <span>Made</span>
+        </h2>
         <div class="portfolio-content">
           <div class="portfolio-img">
-            <img src="C:\Users\mohit\Desktop\portfolio\skill-set.jpg" alt="" />
+            <a href="https://elegant-gelato-2af258.netlify.app/">
+              <img src="Image/Recipe.jpg" alt="Recipe App" />
+          </a>
           </div>
           <div class="portfolio-img">
-            <img src="C:\Users\mohit\Desktop\portfolio\skill-set.jpg" alt="" />
+            <a href="https://majestic-pegasus-441fc4.netlify.app/">
+              <img src="Image/mala.jpg" alt="" />
+          </a>
           </div>
           <div class="portfolio-img">
-            <img src="C:\Users\mohit\Desktop\portfolio\skill-set.jpg" alt="" />
+            <a href="https://captain-sparrow.netlify.app/">
+              <img src="Image/text_speech.jpg" alt="" />
+          </a>
           </div>
           <div class="portfolio-img">
-            <img src="C:\Users\mohit\Desktop\portfolio\skill-set.jpg" alt="" />
+            <a href="https://elegant-gelato-2af258.netlify.app/">
+              <img src="Image/Recipe.jpg" alt="" />
+          </a>
           </div>
           <div class="portfolio-img">
-            <img src="C:\Users\mohit\Desktop\portfolio\skill-set.jpg" alt="" />
+            <a href="https://elegant-gelato-2af258.netlify.app/">
+              <img src="Image/Recipe.jpg" alt="" />
+          </a>
           </div>
+        </div>
+        <div class="learn-more">
+          <a href="Pages/project.html" class="btn">Learn more...</a>
         </div>
       </section>
       <section class="contact" id="contact">
-        <div class="heading">
-          <h2>Contact</h2>
-          <span> contact with Us</span>
+        <h2 class="heading">
+
+            <i class="fas fa-laptop-code"></i> Contact <span>Us</span>
+          </h2>
         </div>
         <!--contact form-->
         <div class="contact-form">
@@ -249,10 +262,10 @@
       <div class="footer">
         <h2>Arpan Yadav</h2>
         <div class="footer-social">
-          <a href=""><i class="bx bxl-instagram"></i></a>
-          <a href=""><i class="bx bxl-facebook"></i></a>
+          <a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a>
           <a href=""><i class="bx bxl-youtube"></i></a>
-          <a href=""><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.twitter.com/"><i class="bx bxl-twitter"></i></a>
         </div>
       </div>
       <!--copyright-->
